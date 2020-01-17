@@ -97,6 +97,14 @@
             <artifactId>dubbo-spring-boot-actuator</artifactId>
             <version>0.2.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.seata/seata-all -->
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-all</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
