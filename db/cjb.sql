@@ -14,6 +14,9 @@
  Date: 03/01/2020 18:01:42
 */
 
+drop database if exists `seata-test`;
+CREATE DATABASE seata-test DEFAULT CHARACTER SET utf8mb4 COLLATE utf8_general_ci;
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
