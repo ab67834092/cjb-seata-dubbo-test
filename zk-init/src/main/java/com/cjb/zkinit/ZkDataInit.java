@@ -1,4 +1,4 @@
-package com.cjb;
+package com.cjb.zkinit;
 
 import org.I0Itec.zkclient.ZkClient;
 import org.apache.zookeeper.CreateMode;
