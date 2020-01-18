@@ -15,10 +15,12 @@
 */
 
 drop database if exists `seata-test`;
-CREATE DATABASE seata-test DEFAULT CHARACTER SET utf8mb4 COLLATE utf8_general_ci;
+CREATE DATABASE `seata-test` DEFAULT CHARACTER SET utf8mb4;
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+use `seata-test`;
 
 -- ----------------------------
 -- Table structure for seata_business_t
