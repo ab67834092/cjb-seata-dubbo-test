@@ -16,5 +16,6 @@ public class WarehouseApiImpl implements WarehouseApi {
     @Override
     public void test() {
         warehouseService.test();
+        int i=1/0;
     }
 }
