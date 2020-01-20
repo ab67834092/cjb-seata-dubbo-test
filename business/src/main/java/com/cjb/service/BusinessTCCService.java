@@ -5,10 +5,8 @@ import io.seata.rm.tcc.api.LocalTCC;
 import io.seata.rm.tcc.api.TwoPhaseBusinessAction;
 
 @LocalTCC
-public interface BusinessService {
+public interface BusinessTCCService {
 
-    //模拟seata AT模式
-    void testAT();
 
     //模拟tcc
     @TwoPhaseBusinessAction(name = "testTCC", commitMethod = "commit", rollbackMethod = "rollback")

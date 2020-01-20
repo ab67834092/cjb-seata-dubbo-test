@@ -1,6 +1,6 @@
 package com.cjb.controller;
 
-import com.cjb.service.BusinessService;
+import com.cjb.service.BusinessATService;
 import com.cjb.service.TccService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +22,7 @@ import java.util.concurrent.Executors;
 public class TestController {
 
     @Autowired
-    BusinessService businessService;
+    BusinessATService businessATService;
 
     @Autowired
     TccService tccService;
@@ -38,7 +38,7 @@ public class TestController {
                 @Override
                 public void run() {
                     try {
-                        businessService.testAT();
+                        businessATService.testAT();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

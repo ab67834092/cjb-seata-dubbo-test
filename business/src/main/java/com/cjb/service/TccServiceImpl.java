@@ -13,13 +13,13 @@ import org.springframework.stereotype.Service;
 public class TccServiceImpl implements TccService {
 
     @Autowired
-    BusinessService businessService;
+    BusinessTCCService businessTCCService;
 
 
     @Override
     @GlobalTransactional
     public void testTCC() {
-        boolean result = businessService.testTCC(null);
+        boolean result = businessTCCService.testTCC(null);
         System.out.println("testTCC result:"+result);
     }
 }
