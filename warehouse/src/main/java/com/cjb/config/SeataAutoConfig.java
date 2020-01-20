@@ -43,10 +43,10 @@ public class SeataAutoConfig {
         druidDataSource.setUsername(dataSourceProperties.getUsername());
         druidDataSource.setPassword(dataSourceProperties.getPassword());
         druidDataSource.setDriverClassName(dataSourceProperties.getDriverClassName());
-        druidDataSource.setInitialSize(0);
-        druidDataSource.setMaxActive(180);
+        druidDataSource.setInitialSize(200);
+        druidDataSource.setMaxActive(2000);
         druidDataSource.setMaxWait(60000);
-        druidDataSource.setMinIdle(0);
+        druidDataSource.setMinIdle(200);
         druidDataSource.setValidationQuery("Select 1 from DUAL");
         druidDataSource.setTestOnBorrow(false);
         druidDataSource.setTestOnReturn(false);
