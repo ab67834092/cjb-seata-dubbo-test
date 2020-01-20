@@ -1,6 +1,7 @@
 package com.cjb.config;
 
 import io.seata.spring.annotation.GlobalTransactionScanner;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,6 +13,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SeataAutoConfig {
 
+    @Value("${spring.application.name}")
+    private String applicationId;
+
     /**
      * init global transaction scanner
      *
@@ -19,6 +23,6 @@ public class SeataAutoConfig {
      */
     @Bean
     public GlobalTransactionScanner globalTransactionScanner(){
-        return new GlobalTransactionScanner("dubbo-gts-seata-example", "business-service-seata-service-group");
+        return new GlobalTransactionScanner(applicationId, applicationId+"-service-group");
     }
 }

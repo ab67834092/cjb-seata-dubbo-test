@@ -19,7 +19,7 @@ public class BusinessATServiceImpl implements BusinessATService {
 
 
     @Override
-    @GlobalTransactional(timeoutMills = 300000, name = "dubbo-gts-seata-example")
+    @GlobalTransactional(timeoutMills = 120000)
     public void testAT(){
         System.out.println("开始全局事务，XID = " + RootContext.getXID());
         orderApi.test();
